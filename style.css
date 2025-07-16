@@ -24,7 +24,7 @@ body, html {
 }
 
 .scrollable {
-  max-height: 80vh;
+  max-height: 100vh;
   overflow-y: auto;
 }
 
@@ -38,3 +38,19 @@ body, html {
   background-color: rgba(0, 0, 0, 0.5); /* oscurece el fondo */
   z-index: -1;
 }
+
+.html, body {
+  overflow: hidden; /* Oculta el desbordamiento y la barra de scroll */
+  height: 100%;     /* Asegura que el body ocupe toda la altura */
+  margin: 0;
+}
+
+/* 2. Permite el scroll solo dentro de las secciones con la clase .scrollable */
+.scrollable {
+  height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+  overflow-y: auto; /* Agrega scroll vertical SOLO si el contenido es más alto */
+  padding-top: 80px; /* Espacio para que el contenido no quede debajo del menú fijo */
+  padding-bottom: 40px; /* Espacio extra al final */
+
+}
+
